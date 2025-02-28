@@ -4,19 +4,48 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
+    <title>Vanilla App Template</title>
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <a href="https://www.edu.goit.global/uk/homepage">
+      <img
+        class="logo animate__animated animate__zoomIn"
+        src="https://www.edu.goit.global/_next/image?url=https%3A%2F%2Fs3.eu-north-1.amazonaws.com%2Flms.goit.files%2F0618d8e0-2652-3e30-ae44-fd6ff17d55a1.png&w=1920&q=75"
+        alt="Best School Logo"
+        width="100"
+      />
+    </a>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
+    <div class="content-wrapper">
+      <div
+        class="img-wrapper animate__animated animate__fadeInDown animate__slower"
+      >
+        <img src="./img/webp/homework9.png" alt="homework" width="200" />
+      </div>
+      <ul class="nav-wraper">
+        <li class="nav-item">
+          <a
+            class="pseudo-btn animate__animated animate__fadeInLeftBig"
+            href="./1-gallery.html"
+            >Gallery</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="pseudo-btn animate__animated animate__fadeInRightBig"
+            href="./2-form.html"
+            >Form</a
+          >
+        </li>
+      </ul>
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>
