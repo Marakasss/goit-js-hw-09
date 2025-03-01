@@ -86,7 +86,7 @@ input {
   box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  min-width: 250px;
+  width: 250px;
 }
 
 .img-wrapper {
@@ -120,4 +120,63 @@ box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
   display: flex;
   width: max-content;
   padding: 12px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.gallery {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.animation {
+  opacity: 1;
+  animation: bounceInDown;
+  animation-duration: 2s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.0444);
+}
+
+section {
+  padding: 24px 0;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+.sl-overlay {
+  background: rgba(46, 47, 66) !important;
+}
+.sl-next,
+.sl-prev,
+.sl-close,
+.sl-counter {
+  color: #FFF !important;
+}
+
+.pseudo-btn.small {
+  border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 0 10px;
 }
