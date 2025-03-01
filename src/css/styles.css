@@ -116,6 +116,8 @@ box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
   color:#EE4A4A;
 }
 
-.logo {
-  margin: 24px;
+.logo-wrapper {
+  display: flex;
+  width: max-content;
+  padding: 12px;
 }
