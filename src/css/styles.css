@@ -73,7 +73,7 @@ input {
   outline: 0;
   border-radius: 320px;
   padding: 16px;
-  background-color: #EBECF0;
+  background: linear-gradient(90deg, rgb(221, 221, 224) 0%, rgba(224, 224, 224, 1) 35%, rgba(241, 241, 247, 1) 100%);
   text-shadow: 1px 1px 0 #FFF;
 }
 
@@ -96,7 +96,7 @@ input {
   margin: 24px;
   width: 300px;
   height: 300px;
-  background-color: #EBECF0;
+    background: linear-gradient(90deg, rgb(221, 221, 224) 0%, rgba(224, 224, 224, 1) 35%, rgba(241, 241, 247, 1) 100%);
 border-radius: 50%;
 box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
 }
