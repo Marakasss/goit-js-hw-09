@@ -7,4 +7,4 @@ import{S as n}from"./vendor-BYsbIkCl.js";(function(){const i=document.createElem
                             />
                         </a>
                     </li>`}).join("");r.insertAdjacentHTML("afterbegin",i),document.querySelectorAll(".gallery-image").forEach((o,e)=>{setTimeout(()=>{o.classList.add("animation")},(e+1)*300)}),new n(".gallery a",{captionsData:"alt",captionDelay:250})}document.addEventListener("DOMContentLoaded",s);
-//# sourceMappingURL=main-CMgxKYWC.js.map
+//# sourceMappingURL=main-DNjrBtUz.js.map
