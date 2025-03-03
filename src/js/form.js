@@ -7,7 +7,7 @@ sendButton.addEventListener('click', event => {
     letterImg.src = '/img/closed-lttr.png';
     letterImg.classList.add('letter-animation');
     setTimeout(() => {
-        letterImg.src = './img/mail_10345769.png';
+        letterImg.src = '/img/mail_10345769.png';
         letterImg.classList.remove('letter-animation')
     }, 2000)
 })
