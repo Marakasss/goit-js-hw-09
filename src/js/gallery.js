@@ -96,7 +96,7 @@ function galleryPage() {
     let galleryItem = document.querySelectorAll('.gallery-image');
     galleryItem.forEach((item, index) => {
         setTimeout(() => {
-            item.classList.add('animation')
+            item.classList.add('animation');
         }, (index + 1) * 300) //delay for every item
     })
 

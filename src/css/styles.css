@@ -61,14 +61,12 @@ font-size: 32px;
   align-items: center;
   justify-content: center;
   width: 100%;
-  
-  
-  
 }
 
 .pseudo-btn,
 .form-button,
-input {
+input,
+textarea {
   border: 0;
   outline: 0;
   border-radius: 320px;
@@ -102,13 +100,11 @@ box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
 }
 
 
-.pseudo-btn:hover,
-.form-button:hover {
+.pseudo-btn:hover, {
   box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #3a3b3d;
 }
 
-.pseudo-btn:active,
-.form-button:active {
+.pseudo-btn:active {
   box-shadow: inset 1px 1px 2px #3a3b3d, inset -1px -1px 2px #FFF;
 }
 
@@ -126,8 +122,8 @@ box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
 
 .gallery {
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 24px;
+  margin-bottom:24px;
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
@@ -141,18 +137,26 @@ box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
   width: 360px;
   height: 200px;
   border-radius: 4px;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 3px 3px 6px #3a3b3d;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   opacity: 0;
 }
 
+
 .animation {
   opacity: 1;
-  animation: bounceInDown;
-  animation-duration: 2s;
+  animation: zoomIn 1s ease-in-out;
 }
+
+
 
 .gallery-image:hover {
   transform: scale(1.0444);
+  box-shadow: 5px 5px 15px #3a3b44;
+}
+
+.gallery-image:active {
+  box-shadow:  1px 1px 2px #3a3b3d,  -1px -1px 2px #FFF;
 }
 
 section {
@@ -172,6 +176,9 @@ section {
 
 .pseudo-btn.small {
   border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
     width: 24px;
     height: 24px;
     padding: 4px;
@@ -179,4 +186,89 @@ section {
     justify-content: center;
     align-items: center;
     margin: 10px 10px 0 10px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border: none;
+  box-shadow: 5px 5px 15px #3a3b44;
+  border-radius: 10px;
+  padding: 36px;
+  min-width: 300px;
+  background: rgb(232, 232, 237);
+    background: radial-gradient(circle, rgba(232, 232, 237, 1) 40%, rgba(178, 178, 181, 1) 100%);
+}
+
+input,
+textarea {
+  box-shadow: inset 2px 2px 5px #8c8e92, inset -3px -3px 3px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    background: rgb(206, 206, 209);
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: inset 1px 1px 2px #85878d, inset -1px -1px 2px #FFF;
+}
+
+textarea {
+  border-radius: 10px;
+}
+.form-button {
+  width: 180px;
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #3a3b3d;
+  background: rgb(206, 206, 209);
+  font-family: "Sour Gummy", sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
+  font-size: 18px;
+}
+
+.form-button:hover {
+box-shadow: -1px -1px 3px #FFF,
+  1px 1px 3px #3a3b3d;;
+}
+
+.form-button:active {
+box-shadow: inset 1px 1px 2px #3a3b3d, inset -1px -1px 2px #FFF;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  color: #2b1818;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.form-descr {
+  color: #2b1818;
+  margin: 0;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.form-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.android {
+  position: absolute;
+  right: 210px;
+  top: 100px;
+  z-index: 999;
 }
