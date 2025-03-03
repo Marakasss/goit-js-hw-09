@@ -214,6 +214,7 @@ textarea {
 
 textarea {
   resize: none;
+  font-family: "Sour Gummy", sans-serif;
 }
 
 input:focus,
@@ -266,9 +267,10 @@ label {
   height: 100vh;
 }
 
-.android {
-  position: absolute;
-  right: 210px;
-  top: 100px;
-  z-index: 999;
+
+
+.letter-animation {
+  animation: backOutRight;
+  animation-duration: 2s;
+  margin-top: 23px;
 }
