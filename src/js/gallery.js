@@ -1,5 +1,6 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
+import 'animate.css';
 
 
 const images = [
@@ -70,7 +71,7 @@ const images = [
 
 //---------------------------------------------------
 
-function galleryPage() {
+
     const gallery = document.querySelector('.gallery');
 
     //ADD PHOTOS TO GALLARY
@@ -106,6 +107,3 @@ function galleryPage() {
         captionsData: 'alt',
         captionDelay: 250,
     });
-}
-
-export default galleryPage;

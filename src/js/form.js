@@ -1,3 +1,4 @@
+import 'animate.css';
 const letterImg = document.querySelector('.letter-img');
 const sendButton = document.querySelector('.form-button');
 
