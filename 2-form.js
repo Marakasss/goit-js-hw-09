@@ -1,2 +1,2 @@
-import"./assets/main-DNjrBtUz.js";import"./assets/vendor-BYsbIkCl.js";const t=document.querySelector(".letter-img"),r=document.querySelector(".form-button");r.addEventListener("click",e=>{e.preventDefault(),t.src="./img/closed-lttr.png",t.classList.add("letter-animation"),setTimeout(()=>{t.src="./img/mail_10345769.png",t.classList.remove("letter-animation")},2e3)});
+import"./assets/main-DNjrBtUz.js";import"./assets/vendor-BYsbIkCl.js";const t=document.querySelector(".letter-img"),r=document.querySelector(".form-button");r.addEventListener("click",e=>{e.preventDefault(),t.src="/img/closed-lttr.png",t.classList.add("letter-animation"),setTimeout(()=>{t.src="./img/mail_10345769.png",t.classList.remove("letter-animation")},2e3)});
 //# sourceMappingURL=2-form.js.map
