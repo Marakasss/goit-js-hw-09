@@ -100,7 +100,7 @@ box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
 }
 
 
-.pseudo-btn:hover, {
+.pseudo-btn:hover {
   box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #3a3b3d;
 }
 
@@ -267,10 +267,27 @@ label {
   height: 100vh;
 }
 
-
-
 .letter-animation {
   animation: backOutRight;
   animation-duration: 2s;
   margin-top: 23px;
+}
+
+.toast {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #3a3b3d;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
 }
