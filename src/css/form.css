@@ -43,7 +43,7 @@ textarea {
 .form-button {
     width: 180px;
     box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #3a3b3d;
-    background-image: linear-gradient(to top, #d0d0d0 0%, #c7c6c6 80%, #f8f5f5 100%);
+    background-image: linear-gradient(to top, #d0d0d0 0%, #c7c6c6 80%, #f8f5f5 99%);
     font-family: "Sour Gummy", sans-serif;
     transition: box-shadow 0.3s ease-in-out;
     font-size: 18px;
@@ -56,7 +56,7 @@ textarea {
 
 .form-button:active {
     box-shadow: inset 1px 1px 2px #3a3b3d, inset -1px -1px 2px #FFF;
-    background-image: linear-gradient(to top, #c5c4c4 50%, #cacaca 80%, #f8f5f5 100%);
+    background-image: linear-gradient(to top, #c5c4c4 50%, #cacaca 80%, #f8f5f5 99%);
 }
 
 label {
