@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,19 +12,23 @@
     />
     <title>Form</title>
     <script type="module" crossorigin src="/goit-js-hw-09/2-form.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/styles-NZmWoyr6.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/styles-BFJuW-_G.js">
     <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/vendor-C7Q3-Pvy.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-BcckxYW6.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-p3F1k5GZ.css">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/vendor-DHQzFxUl.css">
   </head>
   <body>
-    <a class="pseudo-btn small" href="./index.html"
-      ><svg class="icon" width="16" height="16">
-        <use href="./img/svg/prev.svg#icon-undo2"></use>
-      </svg>
-    </a>
-    <div class="form-content-wrapper animate__animated animate__zoomIn">
-      <form class="feedback-form" autocomplete="off" novalidate>
+    <div class="form-content-wrapper">
+      <a class="pseudo-btn small" href="./index.html"
+        ><svg class="icon" width="16" height="16">
+          <use href="./img/svg/prev.svg#icon-undo2"></use>
+        </svg>
+      </a>
+      <form
+        class="feedback-form animate__animated animate__zoomIn"
+        autocomplete="off"
+        novalidate
+      >
         <img
           class="letter-img"
           src="/goit-js-hw-09/img/mail_10345769.png"
@@ -37,7 +42,11 @@
         </label>
         <label>
           Message
-          <textarea name="message" rows="8"></textarea>
+          <textarea
+            name="message"
+            rows="8"
+            placeholder="HEY!.. Mr. Mentor! Leave and send your feedback here and I will read it!"
+          ></textarea>
         </label>
         <button class="form-button" type="submit">Send</button>
       </form>
