@@ -60,9 +60,7 @@ function showAlert(alertDscr) {
     setTimeout(() => alert.classList.remove('show'), 3000);
 }
 
-//BTN SEND FORM OPTIONS AFTER CLICK
-
-
+//FORM BTN OPTIONS AFTER CLICK
 function formSubmit() {
     
     const letterImg = document.querySelector('.letter-img');
