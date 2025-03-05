@@ -13,7 +13,7 @@ let formData = {
 };
 let localStorageData = {};
 
-//FUNCNION TRACKS AND ADD INPUT VALUES TO STORAGE + FORMDATA (+ CHANGE COLOR)
+//FUNCNION TRACKS AND ADD INPUT VALUES TO STORAGE + FORMDATA
 let handleInput = event => {
     formData[event.target.name] = event.target.value.trim();
     localStorage.setItem("feedback-form-state", JSON.stringify(formData));
