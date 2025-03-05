@@ -13,13 +13,30 @@ let formData = {
 };
 let localStorageData = {};
 
-//FUNCNION TRACKS AND ADD INPUT VALUES TO STORAGE + FORMDATA
+//FUNCNION TRACKS AND ADD INPUT VALUES TO STORAGE + FORMDATA (+ CHANGE COLOR)
 let handleInput = event => {
     formData[event.target.name] = event.target.value.trim();
     localStorage.setItem("feedback-form-state", JSON.stringify(formData));
+    
+    //valid email change input color
+    if (event.target.name === 'email') {
+        if (isEmail(event.target.value)) {
+            event.target.style.backgroundColor = 'rgb(225, 225, 225)';
+        } else {
+            event.target.style.backgroundColor = 'rgb(206, 206, 209)';
+        }  
+    }
+    if (event.target.name === 'message') {
+        if (event.target.value.trim() !== "") {
+            event.target.style.backgroundColor = 'rgb(225, 225, 225)';
+        } else {
+            event.target.style.backgroundColor = 'rgb(206, 206, 209)';
+        }
+    }
 };
 emailInput.addEventListener('input', handleInput);
 messageInput.addEventListener('input', handleInput);
+
 
 //ADDS VALUES FROM STORAGE TO FORM
 if (localStorage.getItem("feedback-form-state") !== null) {

@@ -21,6 +21,9 @@ textarea {
     transition: all 0.2s ease-in-out;
     appearance: none;
     background: rgb(206, 206, 209);
+    color: #2b1818;
+        font-family: "Sour Gummy", sans-serif;
+        font-weight: 500;
 }
 
 textarea {
@@ -107,5 +110,7 @@ label {
 }
 
 textarea::placeholder {
-    color: #333;
+    color: #383232;
+    font-weight: 600;
+    text-align: center;
 }
