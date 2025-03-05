@@ -94,9 +94,8 @@ function formSubmit() {
                 //CLEAR LOCAL STORAGE & FORMDATA
                 console.log(formData);
                 localStorage.removeItem("feedback-form-state");
-                Object.keys(formData).forEach(key => formData[key] = '')
-                emailInput.value = formData[emailInput.name];
-                messageInput.value = formData[messageInput.name];
+                Object.keys(formData).forEach(key => formData[key] = '');
+                form.reset();
             })
             .catch(() => {
                 console.error("Email sending failed:", error);
