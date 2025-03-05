@@ -78,6 +78,7 @@ label {
     justify-content: center;
     width: 100%;
     height: 100vh;
+    pointer-events: auto;
 }
 
 .letter-animation {
@@ -103,4 +104,8 @@ label {
 .toast.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+textarea::placeholder {
+    color: #333;
 }
