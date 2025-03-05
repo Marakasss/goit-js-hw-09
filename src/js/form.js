@@ -48,8 +48,8 @@ if (localStorage.getItem("feedback-form-state") !== null) {
         console.error('Error message:', error.message);
     }
         formData = { ...formData, ...localStorageData };
-        emailInput.value = formData[emailInput.name] || '';
-        messageInput.value = formData[messageInput.name] || '';
+        emailInput.value = formData.email || '';
+        messageInput.value = formData.message || '';
     }
 
 //ALERT MESSAGE 
@@ -61,7 +61,9 @@ function showAlert(alertDscr) {
 }
 
 //BTN SEND FORM OPTIONS AFTER CLICK
-function sendBttnOptions() {
+
+
+function formSubmit() {
     
     const letterImg = document.querySelector('.letter-img');
 
@@ -104,4 +106,4 @@ function sendBttnOptions() {
             });
     })
 }
-sendBttnOptions()
+formSubmit()
