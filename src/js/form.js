@@ -1,6 +1,7 @@
 import 'animate.css';
 import isEmail from 'validator/es/lib/isEmail';
 import emailjs from '@emailjs/browser';
+emailjs.init("hQcP3rVr7NWYFyrR0");
 
 //GLOBAL
 const form = document.querySelector('.feedback-form');
@@ -22,10 +23,16 @@ messageInput.addEventListener('input', handleInput);
 
 //ADDS VALUES FROM STORAGE TO FORM
 if (localStorage.getItem("feedback-form-state") !== null) {
+    try {
         localStorageData = JSON.parse(localStorage.getItem("feedback-form-state"));
+    }
+    catch (error) {
+        console.error('Error name:', error.name);
+        console.error('Error message:', error.message);
+    }
         formData = { ...formData, ...localStorageData };
-        emailInput.value = formData[emailInput.name];
-        messageInput.value = formData[messageInput.name];
+        emailInput.value = formData[emailInput.name] || '';
+        messageInput.value = formData[messageInput.name] || '';
     }
 
 //ALERT MESSAGE 
@@ -75,9 +82,9 @@ function sendBttnOptions() {
                 messageInput.value = formData[messageInput.name];
             })
             .catch(() => {
-            showAlert("Error sending message.");
-        });
+                console.error("Email sending failed:", error);
+                showAlert("Error sending message.");
+            });
     })
 }
 sendBttnOptions()
-emailjs.init("hQcP3rVr7NWYFyrR0");

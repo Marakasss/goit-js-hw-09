@@ -1,0 +1,78 @@
+.gallery {
+    list-style: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.gallery-image {
+    display: block;
+    width: 360px;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px #3a3b3d;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+}
+
+
+.animation {
+    opacity: 1;
+    animation: zoomIn 1s ease-in-out;
+}
+
+
+
+.gallery-image:hover {
+    transform: scale(1.0444);
+    box-shadow: 5px 5px 15px #3a3b44;
+}
+
+.gallery-image:active {
+    box-shadow: 1px 1px 2px #3a3b3d, -1px -1px 2px #FFF;
+}
+
+section {
+    padding: 24px 0;
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.sl-overlay {
+    background: rgba(46, 47, 66) !important;
+}
+
+.sl-next,
+.sl-prev,
+.sl-close,
+.sl-counter {
+    color: #FFF !important;
+}
+
+.pseudo-btn.small {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #3a3b3d;
+    margin: 10px 10px 0 10px;
+}
+
+.pseudo-btn.small:hover {
+    box-shadow: -1px -1px 3px #FFF,
+            1px 1px 3px #3a3b3d;
+}
+.pseudo-btn.small:active {
+    box-shadow: inset 1px 1px 2px #3a3b3d, inset -1px -1px 2px #FFF;
+}

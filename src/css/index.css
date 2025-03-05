@@ -1,0 +1,101 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: rgb(232, 232, 237);
+    background: radial-gradient(circle, rgba(232, 232, 237, 1) 80%, rgb(191, 191, 194) 100%);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.nav-item {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+}
+
+.nav-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pseudo-btn,
+.form-button,
+input,
+textarea {
+    border: 0;
+    outline: 0;
+    border-radius: 320px;
+    padding: 16px;
+    background: linear-gradient(90deg, rgb(221, 221, 224) 0%, rgba(224, 224, 224, 1) 35%, rgba(241, 241, 247, 1) 100%);
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+.pseudo-btn,
+.form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: 250px;
+    background-image: linear-gradient(to top, #d0d0d0 0%, #e1e1e1 80%, #f8f5f5 100%);
+}
+
+.img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 24px 24px 24px;
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(to left, #d0d0d0 0%, #e1e1e1 80%, #f8f5f5 100%);
+    border-radius: 50%;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #424450;
+}
+
+
+.pseudo-btn:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #3a3b3d;
+}
+
+.pseudo-btn:active {
+    box-shadow: inset 1px 1px 2px #3a3b3d, inset -1px -1px 2px #FFF;
+    background-image: linear-gradient(to top, #d1d1d1 0%, #e6e6e6 80%, #f8f5f5 150%);
+}
+
+.pseudo-btn {
+    color: #EE4A4A;
+}
+
+.logo-wrapper {
+    display: flex;
+    width: max-content;
+    padding: 12px;
+}
