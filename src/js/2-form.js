@@ -2,7 +2,7 @@ import 'animate.css';
 import isEmail from 'validator/es/lib/isEmail';
 import emailjs from '@emailjs/browser';
 emailjs.init("hQcP3rVr7NWYFyrR0");
-const basePath = import.meta.env.BASE_URL;
+
 
 //GLOBAL
 const form = document.querySelector('.feedback-form');
