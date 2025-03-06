@@ -2,6 +2,7 @@ import 'animate.css';
 import isEmail from 'validator/es/lib/isEmail';
 import emailjs from '@emailjs/browser';
 emailjs.init("hQcP3rVr7NWYFyrR0");
+const basePath = import.meta.env.BASE_URL;
 
 //GLOBAL
 const form = document.querySelector('.feedback-form');
@@ -85,10 +86,10 @@ function formSubmit() {
                 showAlert("Message sent successfully!");
 
                 //ANIMATION SEND LETTER
-                letterImg.src = "/goit-js-hw-09/img/closed-lttr.png";
+                letterImg.src = `${basePath}assets/img/closed-lttr.png`;
                 letterImg.classList.add('letter-animation');
                 setTimeout(() => {
-                    letterImg.src = "/goit-js-hw-09/img/mail_10345769.png";
+                    letterImg.src = `${basePath}assets/img/mail_10345769.png`;
                     letterImg.classList.remove('letter-animation')
                 }, 1000);
                 //CLEAR LOCAL STORAGE & FORMDATA
