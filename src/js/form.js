@@ -85,10 +85,10 @@ function formSubmit() {
                 showAlert("Message sent successfully!");
 
                 //ANIMATION SEND LETTER
-                letterImg.src = "/src/img/closed-lttr.png";
+                letterImg.src = "/img/closed-lttr.png";
                 letterImg.classList.add('letter-animation');
                 setTimeout(() => {
-                    letterImg.src = "/src/img/mail_10345769.png";
+                    letterImg.src = "/img/mail_10345769.png";
                     letterImg.classList.remove('letter-animation')
                 }, 1000);
                 //CLEAR LOCAL STORAGE & FORMDATA
