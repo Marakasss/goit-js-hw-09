@@ -5,26 +5,24 @@ emailjs.init("hQcP3rVr7NWYFyrR0");
 
 //GLOBAL
 const form = document.querySelector('.feedback-form');
-const emailInput = document.querySelector('input');
-const messageInput = document.querySelector('textarea');
 let formData = {
     email: '',
     message: ''
 };
-let localStorageData = {};
+
 
 //FUNCNION TRACKS AND ADD INPUT VALUES TO STORAGE + FORMDATA
 let handleInput = event => {
     formData[event.target.name] = event.target.value.trim();
     localStorage.setItem("feedback-form-state", JSON.stringify(formData));
-    
+
     //valid email change input color
     if (event.target.name === 'email') {
         if (isEmail(event.target.value)) {
             event.target.style.backgroundColor = 'rgb(225, 225, 225)';
         } else {
             event.target.style.backgroundColor = 'rgb(206, 206, 209)';
-        }  
+        }
     }
     if (event.target.name === 'message') {
         if (event.target.value.trim() !== "") {
@@ -34,12 +32,12 @@ let handleInput = event => {
         }
     }
 };
-emailInput.addEventListener('input', handleInput);
-messageInput.addEventListener('input', handleInput);
+form.addEventListener('input', handleInput);
 
 
 //ADDS VALUES FROM STORAGE TO FORM
 if (localStorage.getItem("feedback-form-state") !== null) {
+    let localStorageData = {};
     try {
         localStorageData = JSON.parse(localStorage.getItem("feedback-form-state"));
     }
@@ -47,10 +45,11 @@ if (localStorage.getItem("feedback-form-state") !== null) {
         console.error('Error name:', error.name);
         console.error('Error message:', error.message);
     }
-        formData = { ...formData, ...localStorageData };
-        emailInput.value = formData.email || '';
-        messageInput.value = formData.message || '';
-    }
+    formData = { ...formData, ...localStorageData };
+    form.elements.email.value = formData.email || '';
+    form.elements.message.value = formData.message || '';
+}
+
 
 //ALERT MESSAGE 
 function showAlert(alertDscr) {
@@ -60,9 +59,10 @@ function showAlert(alertDscr) {
     setTimeout(() => alert.classList.remove('show'), 3000);
 }
 
+
 //FORM BTN OPTIONS AFTER CLICK
 function formSubmit() {
-    
+
     const letterImg = document.querySelector('.letter-img');
 
     form.addEventListener('submit', event => {
